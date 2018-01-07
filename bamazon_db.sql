@@ -17,44 +17,56 @@ CREATE TABLE products
     INSERT INTO products
         (product_name, department_name, price, stock_quantity)
     VALUES
-        ("Motorcycle", "Automotive", 6000, 10);
-    INSERT INTO products
-        (product_name, department_name, price, stock_quantity)
-    VALUES
-        ("Tires", "Parts", 300, 10);
-    INSERT INTO products
-        (product_name, department_name, price, stock_quantity)
-    VALUES
-        ("Oil", "Fluids", 10, 10);
-    INSERT INTO products
-        (product_name, department_name, price, stock_quantity)
-    VALUES
-        ("Grips", "Parts", 20, 10);
-    INSERT INTO products
-        (product_name, department_name, price, stock_quantity)
-    VALUES
-        ("Brakes", "Parts", 60, 10);
-    INSERT INTO products
-        (product_name, department_name, price, stock_quantity)
-    VALUES
-        ("Cables", "Parts", 40, 10);
-    INSERT INTO products
-        (product_name, department_name, price, stock_quantity)
-    VALUES
-        ("Lights", "Parts", 160, 10);
-    INSERT INTO products
-        (product_name, department_name, price, stock_quantity)
-    VALUES
-        ("Stickers", "Parts", 50, 10);
-    INSERT INTO products
-        (product_name, department_name, price, stock_quantity)
-    VALUES
-        ("Cowel", "Parts", 260, 10);
-    INSERT INTO products
-        (product_name, department_name, price, stock_quantity)
-    VALUES
-        ("Exhaust", "Parts", 460, 10);
-    INSERT INTO products
-        (product_name, department_name, price, stock_quantity)
-    VALUES
+        ("Motorcycle", "Automotive", 6000, 10),
+        ("Tires", "Parts", 300, 10),
+        ("Oil", "Fluids", 10, 10),
+        ("Grips", "Parts", 20, 10),
+        ("Brakes", "Parts", 60, 10),
+        ("Cables", "Parts", 40, 10),
+        ("Lights", "Parts", 160, 10),
+        ("Stickers", "Parts", 50, 10),
+        ("Cowel", "Parts", 260, 10),
+        ("Exhaust", "Parts", 460, 10),
         ("Wind Screen", "Parts", 130, 10);
+
+
+    -- INSERT INTO products
+    --     (product_name, department_name, price, stock_quantity)
+    -- VALUES
+    --     ("Tires", "Parts", 300, 10);
+    -- INSERT INTO products
+    --     (product_name, department_name, price, stock_quantity)
+    -- VALUES
+    --     ("Oil", "Fluids", 10, 10);
+    -- INSERT INTO products
+    --     (product_name, department_name, price, stock_quantity)
+    -- VALUES
+    --     ("Grips", "Parts", 20, 10);
+    -- INSERT INTO products
+    --     (product_name, department_name, price, stock_quantity)
+    -- VALUES
+    --     ("Brakes", "Parts", 60, 10);
+    -- INSERT INTO products
+    --     (product_name, department_name, price, stock_quantity)
+    -- VALUES
+    --     ("Cables", "Parts", 40, 10);
+    -- INSERT INTO products
+    --     (product_name, department_name, price, stock_quantity)
+    -- VALUES
+    --     ("Lights", "Parts", 160, 10);
+    -- INSERT INTO products
+    --     (product_name, department_name, price, stock_quantity)
+    -- VALUES
+    --     ("Stickers", "Parts", 50, 10);
+    -- INSERT INTO products
+    --     (product_name, department_name, price, stock_quantity)
+    -- VALUES
+    --     ("Cowel", "Parts", 260, 10);
+    -- INSERT INTO products
+    --     (product_name, department_name, price, stock_quantity)
+    -- VALUES
+    --     ("Exhaust", "Parts", 460, 10);
+    -- INSERT INTO products
+    --     (product_name, department_name, price, stock_quantity)
+    -- VALUES
+    --     ("Wind Screen", "Parts", 130, 10);
