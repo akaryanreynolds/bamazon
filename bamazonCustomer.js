@@ -25,7 +25,6 @@ function displayItems() {
             console.log("price of item: $" + res[i].price);
             console.log("-----------------------\n");
         }
-        // connection.end();
         buyItem();
     });
 }
@@ -74,17 +73,15 @@ function chooseItem() {
         }
     ]).then(function (n) {
 
-        connection.query("SELECT * FROM products WHERE ?", { item_id: n.item_num }, function (err, data) {
+        connection.query("SELECT * FROM products WHERE ?", { item_id: n.item_num }, function (err, res) {
             if (err) throw err;
             
-            var productData = data[0];
-
-            if (n.quantity <= productData.stock_quantity) {
+            if (n.quantity <= res[0].stock_quantity) {
                 console.log("Buying items...\n");
 
-                connection.query("UPDATE products SET stock_quantity = " + (productData.stock_quantity - n.quantity) + " WHERE item_id = " + n.item_num, function (err, data) {
+                connection.query("UPDATE products SET stock_quantity = " + (res[0].stock_quantity - n.quantity) + " WHERE item_id = " + n.item_num, function (err) {
                     if (err) throw err;
-                    console.log("Your order has been placed! Your total charged to your account is $" + productData.price * n.quantity + "\nGoodbye");
+                    console.log("Your order has been placed! Your total charged to your account is $" + res[0].price * n.quantity + "\nGoodbye");
                     console.log("-----------------------\n");
                     connection.end();
                 })
