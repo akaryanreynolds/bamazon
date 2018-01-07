@@ -76,21 +76,21 @@ function chooseItem() {
 
         connection.query("SELECT * FROM products WHERE ?", { item_id: n.item_num }, function (err, data) {
             if (err) throw err;
+            
             var productData = data[0];
 
-            console.log("Buying items...\n");
             if (n.quantity <= productData.stock_quantity) {
+                console.log("Buying items...\n");
+
                 connection.query("UPDATE products SET stock_quantity = " + (productData.stock_quantity - n.quantity) + " WHERE item_id = " + n.item_num, function (err, data) {
                     if (err) throw err;
                     console.log("Your order has been placed! Your total charged to your account is $" + productData.price * n.quantity + "\nGoodbye");
                     console.log("-----------------------\n");
-                    // End the database connection
                     connection.end();
                 })
             } else {
-                console.log("Not enough product in stock. Returning to start.");
+                console.log("\nNot enough product in stock. Returning to start.");
                 console.log("-----------------------\n");
-                // displayItems();
                 buyItem();
             }
         })
